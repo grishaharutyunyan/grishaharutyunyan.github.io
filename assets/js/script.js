@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const image = document.querySelector(".home .image img");
+    const defaultSrc = "./assets/images/gh.jpg";
+    const alternateSrc = "./assets/images/xca.avif"; 
+
+    image.addEventListener("click", () => {
+        if (image.src.includes("gh.jpg")) {
+            image.src = alternateSrc;
+        } else {
+            image.src = defaultSrc;
+        }
+    });
+});
 $(document).ready(function () {
 
     $('#menu').click(function () {
@@ -219,6 +232,8 @@ const srtop = ScrollReveal({
     duration: 1000,
     reset: true
 });
+
+
 
 /* SCROLL HOME */
 srtop.reveal('.home .content h3', { delay: 200 });
